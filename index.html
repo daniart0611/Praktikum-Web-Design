@@ -47,16 +47,17 @@
               </div>
             </div>
             <div class="row" id="comment" style="display: none">
-              <div class="col-md-6" style="border-left: 2px dashed #EEEEEE;"></div>
+              <div class="col-md-6 list-comment" style="min-height: 290px;max-height: 290px;overflow-y: scroll;"></div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="comment">Nama:</label>
-                  <input class="form-control" rows="5" id="comment">
+                  <input name="nama-comment" class="form-control" rows="5" id="comment">
                 </div>
                 <div class="form-group">
                   <label for="comment">Comment:</label>
-                  <textarea class="form-control" rows="5" id="comment"></textarea>
+                  <textarea name="comment" class="form-control" rows="5" id="comment"></textarea>
                 </div>
+                <button id="send-comment" class="btn btn-sm btn-default" style="float: right;">Send</button>
               </div>
             </div>
           </div>

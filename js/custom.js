@@ -3,7 +3,19 @@ $(".masthead-nav li").click(function(){
 	$(this).addClass("active");
 	$(".row").hide();
 	$(".row#"+$(this).attr("target")).show();
-})
+});
+
+$("#send-comment").click(function(){
+    if($("[name='nama-comment']").val() && $("[name='comment']").val()){
+        $(".list-comment").append(`<div class="col-sm-12" style="padding: 0px">
+          <div class="col-md-3"><img src="img/user.png" alt="Profile Image" class="img-circle img-responsive" style=""\></div>
+          <div class="col-md-9 name-comment">`+ $("[name='nama-comment']").val() +`</div>
+          <div class="col-md-9 comment">`+ $("[name='comment']").val() +`</div>
+        </div>`);
+    } else {
+        alert("Data tidak boleh kosong.")
+    }
+});
 
 var ctx = document.getElementById("skillChart").getContext('2d');
 var myChart = new Chart(ctx, {
