@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="icon" href="../../favicon.ico">
-    <title>Cover Template for Bootstrap</title>
+    <link rel="icon" href="img/profile.jpg">
+    <title>Profile - Dani Ahmad J.</title>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/layout.css" rel="stylesheet">
+    <link href="css/mdb.css" rel="stylesheet">
   </head>
   <body>
-
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
         <div class="cover-container">
           <div class="inner cover">
-            <div class="row">
+            <div class="row" id="about">
               <div class="col-md-6">
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
@@ -31,22 +31,40 @@
                   to be rich, not just for me, but for many people.
                 </p>
                 <div class="col-md-4">
-                  <img src="img/icon-fb.ico" alt="Profile Image" class="img-circle img-responsive"\>
+                  <a target="_blank" href="https://www.facebook.com/deajeciel"><img src="img/icon-fb.ico" alt="Profile Image" class="img-circle img-responsive"\></a>
                 </div>
                 <div class="col-md-4">
-                  <img src="img/icon-ig.ico" alt="Profile Image" class="img-circle img-responsive"\>
+                  <a target="_blank" href="https://www.instagram.com/_deaje/"><img src="img/icon-ig.ico" alt="Profile Image" class="img-circle img-responsive"\></a>
                 </div>
                 <div class="col-md-4">
-                  <img src="img/icon-gmail.ico" alt="Profile Image" class="img-circle img-responsive"\>
+                  <a target="_blank" href="#"><img src="img/icon-gmail.ico" alt="Profile Image" class="img-circle img-responsive"\></a>
+                </div>
+              </div>
+            </div>
+            <div class="row" id="skills" style="display: none">
+              <div class="col-md-12">
+                <canvas id="skillChart" style="max-width: 500px;"></canvas>
+              </div>
+            </div>
+            <div class="row" id="comment" style="display: none">
+              <div class="col-md-6" style="border-left: 2px dashed #EEEEEE;"></div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="comment">Nama:</label>
+                  <input class="form-control" rows="5" id="comment">
+                </div>
+                <div class="form-group">
+                  <label for="comment">Comment:</label>
+                  <textarea class="form-control" rows="5" id="comment"></textarea>
                 </div>
               </div>
             </div>
           </div>
           <nav>
             <ul class="nav masthead-nav">
-              <li class="active"><a href="#">About Me</a></li>
-              <li><a href="#">Skills</a></li>
-              <li><a href="#">Command</a></li>
+              <li target="about" class="active"><a href="#">About Me</a></li>
+              <li target="skills"><a href="#">Skills</a></li>
+              <li target="comment"><a href="#">Comment</a></li>
             </ul>
           </nav>
           <div class="mastfoot">
@@ -58,6 +76,8 @@
       </div>
     </div>
     <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/mdb.js"></script>
+    <script src="js/custom.js"></script>
   </body>
 </html>
