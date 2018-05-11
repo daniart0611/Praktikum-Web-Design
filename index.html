@@ -60,12 +60,20 @@
                 <button id="send-comment" class="btn btn-sm btn-default" style="float: right;">Send</button>
               </div>
             </div>
+            <div class="row" id="portfolio" style="display: none">
+              <div class="col-md-12 list-portfolio" style="display: -webkit-inline-box;max-height: 290px;overflow-y: scroll;"></div>
+            </div>
+            <div class="row" id="galery" style="display: none">
+              <div class="col-md-12 list-galery" style="max-height: 290px;overflow-y: scroll;"></div>
+            </div>
           </div>
           <nav>
             <ul class="nav masthead-nav">
               <li target="about" class="active"><a href="#">About Me</a></li>
               <li target="skills"><a href="#">Skills</a></li>
               <li target="comment"><a href="#">Comment</a></li>
+              <li target="galery"><a href="#">Galery</a></li>
+              <li target="portfolio"><a href="#">Portfolio</a></li>
             </ul>
           </nav>
           <div class="mastfoot">
@@ -77,6 +85,7 @@
       </div>
     </div>
     <script src="js/jquery.js"></script>
+    <script src="js/knockout.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/mdb.js"></script>
     <script src="js/custom.js"></script>

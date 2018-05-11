@@ -1,8 +1,55 @@
+var portfolio = [
+    {'nama-project': 'Project 1'},
+    {'nama-project': 'Project 2'},
+    {'nama-project': 'Project 3'},
+    {'nama-project': 'Project 4'},
+    {'nama-project': 'Project 5'},
+    {'nama-project': 'Project 6'},
+    {'nama-project': 'Project 7'},
+    {'nama-project': 'Project 8'},
+    {'nama-project': 'Project 9'},
+    {'nama-project': 'Project 10'},
+    {'nama-project': 'Project 11'},
+    {'nama-project': 'Project 12'},
+];
+
+var galery = [
+    {'nama-galery': 'Galery1'},
+    {'nama-galery': 'Galery2'},
+    {'nama-galery': 'Galery3'},
+    {'nama-galery': 'Galery4'},
+    {'nama-galery': 'Galery5'},
+    {'nama-galery': 'Galery6'},
+    {'nama-galery': 'Galery7'},
+    {'nama-galery': 'Galery8'},
+    {'nama-galery': 'Galery9'},
+];
+
+if(portfolio.length > 0){
+    for(var i in portfolio){
+        $(".list-portfolio").append(`
+            <div class='box'>`+ portfolio[i]['nama-project'] +`</div>
+        `);
+    }
+} else {
+    $(".list-portfolio").append("<h3>Data Tidak ada</h3");
+}
+
+if(galery > 0){
+    for(var i in galery){
+        $(".list-galery").append(`
+            <div class="col-md-3"><img src="img/`+ galery[i]['nama-galery'] +`.jpg" alt="Profile Image" class="img-circle img-responsive"></div>
+        `);
+    }
+} else {
+    $(".list-galery").append("<h3>Data Tidak ada</h3");
+}
+
 $(".masthead-nav li").click(function(){
 	$(".masthead-nav li").removeClass("active");
 	$(this).addClass("active");
-	$(".row").hide();
-	$(".row#"+$(this).attr("target")).show();
+	$(".row").fadeOut();
+	$(".row#"+$(this).attr("target")).delay(500).fadeIn("slow");
 });
 
 $("#send-comment").click(function(){
