@@ -35,7 +35,7 @@ if(portfolio.length > 0){
     $(".list-portfolio").append("<h3>Data Tidak ada</h3");
 }
 
-if(galery > 0){
+if(galery.length > 0){
     for(var i in galery){
         $(".list-galery").append(`
             <div class="col-md-3"><img src="img/`+ galery[i]['nama-galery'] +`.jpg" alt="Profile Image" class="img-circle img-responsive"></div>
